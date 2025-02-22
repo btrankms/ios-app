@@ -10,17 +10,42 @@
         /* End PBXBuildFile section */
         
         /* Begin PBXFileReference section */
-        8A1B2C3D4E5F6G7I /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+        8A1B2C3D4E5F6G7I /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = src/ViewControllers/ViewController.swift; sourceTree = "<group>"; };
         8A1B2C3D4E5F6G7J /* ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
         /* End PBXFileReference section */
         
+        /* Begin PBXFrameworksBuildPhase section */
+        8A1B2C3D4E5F6G7R /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildPhases = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        /* End PBXFrameworksBuildPhase section */
+        
         /* Begin PBXGroup section */
+        8A1B2C3D4E5F6G7S /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                8A1B2C3D4E5F6G7J /* ios-app.app */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
         8A1B2C3D4E5F6G7K /* ios-app */ = {
             isa = PBXGroup;
             children = (
                 8A1B2C3D4E5F6G7I /* ViewController.swift */,
             );
             path = "ios-app";
+            sourceTree = "<group>";
+        };
+        8A1B2C3D4E5F6G7T = {
+            isa = PBXGroup;
+            children = (
+                8A1B2C3D4E5F6G7K /* ios-app */,
+                8A1B2C3D4E5F6G7S /* Products */,
+            );
             sourceTree = "<group>";
         };
         /* End PBXGroup section */
@@ -31,6 +56,7 @@
             buildConfigurationList = 8A1B2C3D4E5F6G7M /* Build configuration list for PBXNativeTarget "ios-app" */;
             buildPhases = (
                 8A1B2C3D4E5F6G7N /* Sources */,
+                8A1B2C3D4E5F6G7R /* Frameworks */,
             );
             buildRules = (
             );
