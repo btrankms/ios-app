@@ -10,7 +10,7 @@
         /* End PBXBuildFile section */
         
         /* Begin PBXFileReference section */
-        8A1B2C3D4E5F6G7I /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = src/ViewControllers/ViewController.swift; sourceTree = "<group>"; };
+        8A1B2C3D4E5F6G7I /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/ViewControllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
         8A1B2C3D4E5F6G7J /* ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
         /* End PBXFileReference section */
         
@@ -18,10 +18,22 @@
         8A1B2C3D4E5F6G7R /* Frameworks */ = {
             isa = PBXFrameworksBuildPhase;
             buildPhases = (
+                8A1B2C3D4E5F6G7H /* Sources */,
             );
             runOnlyForDeploymentPostprocessing = 0;
         };
         /* End PBXFrameworksBuildPhase section */
+        
+        /* Begin PBXSourcesBuildPhase section */
+        8A1B2C3D4E5F6G7N /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                8A1B2C3D4E5F6G7H /* ViewController.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        /* End PBXSourcesBuildPhase section */
         
         /* Begin PBXGroup section */
         8A1B2C3D4E5F6G7S /* Products */ = {
@@ -76,12 +88,55 @@
         8A1B2C3D4E5F6G7P /* Debug */ = {
             isa = XCBuildConfiguration;
             buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
                 IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
                 SWIFT_VERSION = 5.0;
             };
             name = Debug;
         };
+        8A1B2C3D4E5F6G7U /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                SWIFT_COMPILATION_MODE = wholemodule;
+                SWIFT_VERSION = 5.0;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
         /* End XCBuildConfiguration section */
+        
+        /* Begin XCConfigurationList section */
+        8A1B2C3D4E5F6G7M /* Build configuration list for PBXNativeTarget "ios-app" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                8A1B2C3D4E5F6G7P /* Debug */,
+                8A1B2C3D4E5F6G7U /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        /* End XCConfigurationList section */
         
         /* Begin XCRemoteSwiftPackageReference section */
         8A1B2C3D4E5F6G7Q /* XCRemoteSwiftPackageReference "Charts" */ = {
