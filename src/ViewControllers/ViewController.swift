@@ -53,16 +53,13 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
     private func processCSVData() {
         guard let csvData = csvData else { return }
         
-        // Split the CSV into rows
         let rows = csvData.components(separatedBy: .newlines)
-                         .filter { !$0.isEmpty } // Remove empty lines
+                         .filter { !$0.isEmpty }
         
-        guard rows.count > 1 else { return } // Ensure we have header + data
+        guard rows.count > 1 else { return }
         
-        // Assuming CSV format: Date,Sales
         var entries: [BarChartDataEntry] = []
         
-        // Skip header row (index 0) and process data rows
         for (index, row) in rows.dropFirst().enumerated() {
             let columns = row.components(separatedBy: ",")
             if columns.count >= 2, let salesValue = Double(columns[1]) {
@@ -71,25 +68,23 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
             }
         }
         
-        // Create dataset and customize appearance
         let dataSet = BarChartDataSet(entries: entries, label: "Sales")
-        dataSet.colors = [.systemBlue]
+        dataSet.setColor(.systemBlue)
         dataSet.valueTextColor = .black
         
-        // Update chart on main thread
         DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
             let chartData = BarChartData(dataSet: dataSet)
-            self?.barChartView.data = chartData
+            self.barChartView.data = chartData
             
-            // Customize chart appearance
-            self?.barChartView.xAxis.labelPosition = .bottom
-            self?.barChartView.xAxis.granularity = 1
-            self?.barChartView.animate(xAxisDuration: 1.0)
+            self.barChartView.xAxis.labelPosition = .bottom
+            self.barChartView.xAxis.setLabelCount(entries.count, force: false)
+            self.barChartView.animate(xAxisDuration: 1.0)
             
-            // Update labels if dates are present
             if rows.count > 1 {
                 let dateLabels = rows.dropFirst().map { $0.components(separatedBy: ",")[0] }
-                self?.barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dateLabels)
+                self.barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: dateLabels)
             }
         }
     }

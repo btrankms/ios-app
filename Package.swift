@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -7,14 +7,20 @@ let package = Package(
     platforms: [
         .iOS(.v13)
     ],
+    products: [
+        .library(
+            name: "ios-app",
+            targets: ["ios-app"])
+    ],
     dependencies: [
-        .package(url: "https://github.com/danielgindi/Charts.git", .upToNextMajor(from: "4.1.0"))
+        .package(url: "https://github.com/danielgindi/Charts.git", .upToNextMajor(from: "5.0.0"))
     ],
     targets: [
         .target(
             name: "ios-app",
-            dependencies: ["Charts"],
-            path: "src"
-        )
+            dependencies: [
+                .product(name: "Charts", package: "Charts")
+            ],
+            path: "src")
     ]
 )
