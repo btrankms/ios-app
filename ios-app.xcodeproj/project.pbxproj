@@ -1,0 +1,46 @@
+// Mac-style project file format
+{
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 56;
+    objects = {
+        /* Begin PBXBuildFile section */
+        /* End PBXBuildFile section */
+        
+        /* Begin PBXFileReference section */
+        /* End PBXFileReference section */
+        
+        /* Begin PBXGroup section */
+        /* End PBXGroup section */
+        
+        /* Begin PBXNativeTarget section */
+        /* End PBXNativeTarget section */
+        
+        /* Begin XCBuildConfiguration section */
+        /* End XCBuildConfiguration section */
+        
+        /* Begin XCConfigurationList section */
+        /* End XCConfigurationList section */
+        
+        /* Begin XCRemoteSwiftPackageReference section */
+        1234567890ABCDEF /* XCRemoteSwiftPackageReference "Charts" */ = {
+            isa = XCRemoteSwiftPackageReference;
+            repositoryURL = "https://github.com/danielgindi/Charts.git";
+            requirement = {
+                kind = upToNextMajorVersion;
+                minimumVersion = 4.1.0;
+            };
+        };
+        /* End XCRemoteSwiftPackageReference */
+        
+        /* Begin XCSwiftPackageProductDependency section */
+        1234567890ABCDEF /* Charts */ = {
+            isa = XCSwiftPackageProductDependency;
+            package = 1234567890ABCDEF /* XCRemoteSwiftPackageReference "Charts" */;
+            productName = Charts;
+        };
+        /* End XCSwiftPackageProductDependency */
+    };
+    rootObject = YOUR_PROJECT_ID /* Project object */;
+}
