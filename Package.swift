@@ -13,6 +13,8 @@ let package = Package(
     targets: [
         .target(
             name: "ios-app",
-            dependencies: ["Charts"])
+            dependencies: ["Charts"],
+            path: "src"
+        )
     ]
 )
