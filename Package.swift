@@ -7,11 +7,6 @@ let package = Package(
     platforms: [
         .iOS(.v13)
     ],
-    products: [
-        .library(
-            name: "ios-app",
-            targets: ["ios-app"])
-    ],
     dependencies: [
         .package(url: "https://github.com/danielgindi/Charts.git", .upToNextMajor(from: "5.0.0"))
     ],
