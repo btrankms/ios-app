@@ -6,25 +6,59 @@
     objectVersion = 56;
     objects = {
         /* Begin PBXBuildFile section */
+        8A1B2C3D4E5F6G7H /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2C3D4E5F6G7I /* ViewController.swift */; };
         /* End PBXBuildFile section */
         
         /* Begin PBXFileReference section */
+        8A1B2C3D4E5F6G7I /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+        8A1B2C3D4E5F6G7J /* ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
         /* End PBXFileReference section */
         
         /* Begin PBXGroup section */
+        8A1B2C3D4E5F6G7K /* ios-app */ = {
+            isa = PBXGroup;
+            children = (
+                8A1B2C3D4E5F6G7I /* ViewController.swift */,
+            );
+            path = "ios-app";
+            sourceTree = "<group>";
+        };
         /* End PBXGroup section */
         
         /* Begin PBXNativeTarget section */
+        8A1B2C3D4E5F6G7L /* ios-app */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 8A1B2C3D4E5F6G7M /* Build configuration list for PBXNativeTarget "ios-app" */;
+            buildPhases = (
+                8A1B2C3D4E5F6G7N /* Sources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = "ios-app";
+            packageProductDependencies = (
+                8A1B2C3D4E5F6G7O /* DGCharts */,
+            );
+            productName = "ios-app";
+            productReference = 8A1B2C3D4E5F6G7J /* ios-app.app */;
+            productType = "com.apple.product-type.application";
+        };
         /* End PBXNativeTarget section */
         
         /* Begin XCBuildConfiguration section */
+        8A1B2C3D4E5F6G7P /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+                SWIFT_VERSION = 5.0;
+            };
+            name = Debug;
+        };
         /* End XCBuildConfiguration section */
         
-        /* Begin XCConfigurationList section */
-        /* End XCConfigurationList section */
-        
         /* Begin XCRemoteSwiftPackageReference section */
-        1234567890ABCDEF /* XCRemoteSwiftPackageReference "Charts" */ = {
+        8A1B2C3D4E5F6G7Q /* XCRemoteSwiftPackageReference "Charts" */ = {
             isa = XCRemoteSwiftPackageReference;
             repositoryURL = "https://github.com/danielgindi/Charts.git";
             requirement = {
@@ -32,15 +66,15 @@
                 minimumVersion = 4.1.0;
             };
         };
-        /* End XCRemoteSwiftPackageReference */
+        /* End XCRemoteSwiftPackageReference section */
         
         /* Begin XCSwiftPackageProductDependency section */
-        1234567890ABCDEF /* Charts */ = {
+        8A1B2C3D4E5F6G7O /* DGCharts */ = {
             isa = XCSwiftPackageProductDependency;
-            package = 1234567890ABCDEF /* XCRemoteSwiftPackageReference "Charts" */;
-            productName = Charts;
+            package = 8A1B2C3D4E5F6G7Q /* XCRemoteSwiftPackageReference "Charts" */;
+            productName = DGCharts;
         };
         /* End XCSwiftPackageProductDependency */
     };
-    rootObject = YOUR_PROJECT_ID /* Project object */;
+    rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
